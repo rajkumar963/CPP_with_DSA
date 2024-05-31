@@ -53,7 +53,7 @@
 //    cout<<devide(pre);
 // }
 
-//Largest sum contiguous subarray
+//(Kadane's Algorithm)Largest sum contiguous subarray
 //  #include<bits/stdc++.h>
 //  using namespace std;
 //  int main(){
@@ -78,7 +78,26 @@
 //      cout<<max_sum;
 //  }
 
-//Kadane's Algorithm
+//max Difference b/w 2 elements
 #include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int n;
+    cout<<"Enter the size of array:";
+    cin>>n;
+    vector<int>pre(n);
+    cout<<"Enter the elements in array:";
+    for(int i=0;i<n;i++){
+        cin>>pre[i];
+    }
+            // int max_diff=INT_MIN;
+            // for(int i=0;i<n;i++){
+            //     for(int j=i;j<n;j++){
+            //         max_diff=max(max_diff,pre[j]-pre[i]);
+            //     }
+            // }
+            // cout<<max_diff;
+}
+
 
 
