@@ -49,7 +49,6 @@ int findSum(int n) {
     }
     return sum;
 }
-
 int main() {
     int t;
     cin >> t;
