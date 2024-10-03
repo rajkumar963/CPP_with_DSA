@@ -33,31 +33,68 @@ int main(){
 
     //inserting the node at the beginning
     //linklist does not exist
-    if(head==NULL){
-        head = new Node(1);
-    }
-    //linklist exist
-    else{
-        Node *temp=new Node(1);
-        temp->next=head;
-        head->prev=temp;
-        head=temp;
-    }
+    // if(head==NULL){
+    //     head = new Node(1);
+    // }
+    // //linklist exist
+    // else{
+    //     Node *temp=new Node(1);
+    //     temp->next=head;
+    //     head->prev=temp;
+    //     head=temp;
+    // }
 
     //inserting the node at the end
     //linklist does not exist
-    if(head==NULL){
-        head = new Node(7);
-        tail=head;
-    }
-    //linklist exist
-    else{
-        Node *temp=new Node(7);
-        tail->next=temp;
-        temp->prev=tail;
-        tail=temp;
-    }
+    // if(head==NULL){
+    //     head = new Node(7);
+    //     tail=head;
+    // }
+    // //linklist exist
+    // else{
+    //     Node *temp=new Node(7);
+    //     tail->next=temp;
+    //     temp->prev=tail;
+    //     tail=temp;
+    // }
 
+    // Insert at any given position
+      int pos=2;
+      //insert at start
+      if(pos==0){
+        //linklist does not exist
+        if(head==NULL){
+            head = new Node(12);
+        }
+        //linklist exist
+        else{
+            Node *temp=new Node(12);
+            temp->next=head;
+            head->prev=temp;
+            head=temp;
+        }
+      }else{
+        Node *curr=head;
+        while(pos--){
+            curr=curr->next;
+        }
+      //insert at end
+      if(curr->next==NULL){
+        Node *temp=new Node(12);
+         temp->prev=curr;
+        curr->next=temp;
+       
+
+      }else{
+      //insert at middle
+        Node *temp=new Node(15);
+        temp->next=curr->next;
+        temp->prev=curr;
+        curr->next=temp;
+        temp->next->prev=temp;
+        
+      }
+      }
     //printing the linklist
     Node * trav=head;
     while(trav){
